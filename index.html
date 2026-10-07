@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Official website of Big Shizzy (Toluwani) — artist, entertainer and creative professional from Ogun State, Nigeria.">
+
+  <meta name="theme-color" content="#050505">
+
+  <title>Big Shizzy | Artist • Entertainer • Creative</title>
+
+  <style>
+
+    /* =========================================================
+       BIG SHIZZY
+       COMPLETE ONE-FILE WEBSITE
+       CSS IS EMBEDDED IN THIS HTML FILE
+    ========================================================= */
+
+    :root {
+      --black: #050505;
+      --dark: #0b0b0b;
+      --dark-2: #101010;
+      --card: #121212;
+
+      --gold: #d4af37;
+      --gold-light: #f4d675;
+      --gold-dark: #9d7d18;
+
+      --white: #ffffff;
+      --gray: #aaaaaa;
+      --gray-dark: #666666;
+
+      --border: rgba(212, 175, 55, 0.18);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #050505;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 20px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+
+    /* =========================================================
+       SCROLL PROGRESS
+    ========================================================= */
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--gold);
+      z-index: 9999;
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(5, 5, 5, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+    }
+
+    .navbar {
+      min-height: 74px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #dddddd;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-button {
+      border: 1px solid var(--gold);
+      padding: 9px 15px;
+      color: var(--gold) !important;
+    }
+
+    .nav-button:hover {
+      background: var(--gold);
+      color: #000 !important;
+    }
+
+    .menu-btn {
+      display: none;
+      color: var(--gold);
+      font-size: 1.8rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+
+    /* =========================================================
+       GENERAL
+    ========================================================= */
+
+    section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .section-heading {
+      margin-bottom: 50px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+    }
+
+    .section-label {
+      display: block;
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .section-heading h2 span {
+      color: var(--gold);
+    }
+
+    .section-description {
+      max-width: 650px;
+      color: var(--gray);
+      margin-top: 15px;
+    }
+
+    .center .section-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 48px;
+      padding: 0 22px;
+
+      border: 1px solid var(--gold);
+
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      transition: 0.3s ease;
+    }
+
+    .btn.gold {
+      background: var(--gold);
+      color: #080808;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.18);
+    }
+
+    .btn.gold:hover {
+      background: var(--gold-light);
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 130px;
+      padding-bottom: 80px;
+
+      background:
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(212, 175, 55, 0.14),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(212, 175, 55, 0.06),
+          transparent 25%
+        ),
+        linear-gradient(135deg, #050505, #0c0c0c);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 0.76rem;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.85;
+      letter-spacing: -6px;
+      margin: 20px 0 28px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--gold);
+    }
+
+    .hero-text {
+      max-width: 570px;
+      color: #bcbcbc;
+      font-size: 1.05rem;
+    }
+
+    .hero-photo {
+      position: relative;
+      width: min(470px, 100%);
+      margin: auto;
+    }
+
+    .hero-photo::before {
+      content: "";
+
+      position: absolute;
+      inset: -12px;
+
+      border: 1px solid var(--gold);
+
+      transform: rotate(3deg);
+
+      opacity: 0.5;
+    }
+
+    .hero-photo::after {
+      content: "";
+
+      position: absolute;
+      inset: -22px;
+
+      border: 1px solid rgba(212, 175, 55, 0.14);
+
+      transform: rotate(-2deg);
+    }
+
+    .hero-photo img {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      border: 1px solid #272727;
+    }
+
+    .hero-badge {
+      position: absolute;
+      right: -15px;
+      bottom: -20px;
+
+      z-index: 4;
+
+      width: 125px;
+      height: 125px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+      color: #080808;
+
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+    }
+
+
+    /* =========================================================
+       QUICK INFO STRIP
+    ========================================================= */
+
+    .info-strip {
+      background: #090909;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      padding: 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .info-item {
+      padding: 28px 20px;
+      border-right: 1px solid #222;
+    }
+
+    .info-item:last-child {
+      border-right: none;
+    }
+
+    .info-item small {
+      display: block;
+
+      color: #666;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .info-item strong {
+      display: block;
+
+      color: var(--gold-light);
+      margin-top: 5px;
+      font-size: 0.95rem;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about {
+      background: var(--black);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-photo {
+      position: relative;
+    }
+
+    .about-photo img {
+      width: 100%;
+      border: 1px solid #282828;
+    }
+
+    .about-photo-frame {
+      position: absolute;
+      inset: 15px -15px -15px 15px;
+
+      border: 1px solid var(--gold);
+
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .about-content p {
+      color: #b7b7b7;
+      margin-bottom: 18px;
+    }
+
+    .about-highlight {
+      margin: 28px 0;
+
+      padding: 24px;
+
+      border-left: 3px solid var(--gold);
+
+      background: linear-gradient(
+        90deg,
+        rgba(212, 175, 55, 0.09),
+        transparent
+      );
+    }
+
+    .about-highlight strong {
+      color: var(--gold-light);
+      font-size: 1.1rem;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+
+      background: #292929;
+
+      margin-top: 28px;
+    }
+
+    .fact {
+      background: var(--card);
+      padding: 20px;
+    }
+
+    .fact small {
+      display: block;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.68rem;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--gold-light);
+      margin-top: 5px;
+    }
+
+
+    /* =========================================================
+       ARTIST PROFILE
+    ========================================================= */
+
+    .profile {
+      background: #090909;
+      overflow: hidden;
+    }
+
+    .profile::before {
+      content: "SHIZZY";
+
+      position: absolute;
+      right: -80px;
+      top: 80px;
+
+      font-size: 12rem;
+      font-weight: 900;
+
+      color: rgba(212, 175, 55, 0.025);
+
+      pointer-events: none;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .profile-box {
+      padding: 35px;
+
+      background: var(--card);
+
+      border: 1px solid #202020;
+
+      transition: 0.3s;
+    }
+
+    .profile-box:hover {
+      border-color: rgba(212, 175, 55, 0.4);
+      transform: translateY(-5px);
+    }
+
+    .profile-icon {
+      color: var(--gold);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .profile-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .profile-box p {
+      color: #909090;
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+      background: #050505;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+
+      min-height: 175px;
+
+      padding: 30px;
+
+      background: var(--card);
+
+      border: 1px solid #1e1e1e;
+
+      transition: 0.35s ease;
+    }
+
+    .service-card::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 3px;
+      height: 0;
+
+      background: var(--gold);
+
+      transition: 0.35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+
+    .service-card:hover::before {
+      height: 100%;
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .service-card h3 {
+      margin: 12px 0 8px;
+      font-size: 1.12rem;
+    }
+
+    .service-card p {
+      color: #858585;
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================================================
+       CREATIVE JOURNEY
+    ========================================================= */
+
+    .journey {
+      background: #090909;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline::before {
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+      top: 0;
+      bottom: 0;
+
+      width: 1px;
+
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .timeline-item {
+      width: 50%;
+      padding: 20px 45px;
+
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-dot {
+      position: absolute;
+
+      top: 35px;
+
+      width: 13px;
+      height: 13px;
+
+      background: var(--gold);
+
+      border-radius: 50%;
+
+      box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.08);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      right: -6px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -6px;
+    }
+
+    .timeline-content {
+      padding: 25px;
+
+      background: var(--card);
+
+      border: 1px solid #202020;
+    }
+
+    .timeline-content small {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .timeline-content h3 {
+      margin: 8px 0;
+    }
+
+    .timeline-content p {
+      color: #898989;
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================================================
+       MEDIA / GALLERY
+    ========================================================= */
+
+    .media {
+      background: var(--black);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+
+      background: #0c0c0c;
+
+      border: 1px solid #222;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+
+      object-fit: cover;
+
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+
+    /* =========================================================
+       SOCIAL / CTA
+    ========================================================= */
+
+    .cta {
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(212, 175, 55, 0.11),
+          transparent 42%
+        ),
+        #090909;
+
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .cta-inner p {
+      color: #aaa;
+      max-width: 650px;
+      margin: 18px auto 0;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 150px;
+      min-height: 45px;
+
+      border: 1px solid #353535;
+
+      color: #ccc;
+
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      transition: 0.3s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact {
+      background: #050505;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-card {
+      padding: 35px;
+
+      background: var(--card);
+
+      border: 1px solid #202020;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: #888;
+    }
+
+    .contact-link {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 30px 0;
+
+      border-top: 1px solid #1e1e1e;
+
+      text-align: center;
+
+      color: #666;
+
+      font-size: 0.82rem;
+    }
+
+    footer span {
+      color: var(--gold);
+    }
+
+
+    /* =========================================================
+       ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gold-line {
+      width: 70px;
+      height: 2px;
+
+      background: var(--gold);
+
+      margin-top: 18px;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-photo {
+        max-width: 430px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even),
+      .timeline-item:nth-child(odd) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 55px;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: 14px;
+        right: auto;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 74px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: #080808;
+
+        border-bottom: 1px solid #222;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .info-item {
+        border-bottom: 1px solid #222;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      section {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.5rem, 17vw, 5rem);
+        letter-spacing: -3px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .facts {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-item {
+        border-right: none;
+      }
+
+      .buttons,
+      .social-buttons {
+        flex-direction: column;
+      }
+
+      .btn,
+      .social-btn {
+        width: 100%;
+      }
+
+      .hero-badge {
+        width: 100px;
+        height: 100px;
+
+        right: -5px;
+        bottom: -10px;
+
+        font-size: 0.55rem;
+      }
+
+      .timeline-content {
+        padding: 20px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =======================================================
+       SCROLL PROGRESS
+  ======================================================== -->
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header>
+
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+        BIG SHIZZY
+      </a>
+
+      <div class="menu-btn" id="menuBtn">
+        ☰
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#journey">Journey</a>
+        </li>
+
+        <li>
+          <a href="#media">Media</a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-button">Book</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="hero-label">
+            Artist • Entertainer • Creative
+          </div>
+
+          <h1>
+            BIG
+            <span>SHIZZY</span>
+          </h1>
+
+          <p class="hero-text">
+            Meet Toluwani — an artist and entertainer from Ogun State,
+            Nigeria, bringing creativity, entertainment and professional
+            artist services together.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              href="https://wa.me/2349070804147"
+              target="_blank"
+              class="btn gold"
+            >
+              Book / WhatsApp
+            </a>
+
+            <a
+              href="#about"
+              class="btn"
+            >
+              Discover Shizzy
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-photo reveal">
+
+          <img
+            src="shizzy.jpg"
+            alt="Big Shizzy portrait"
+          >
+
+          <div class="hero-badge">
+            BIG<br>
+            SHIZZY<br>
+            CREATIVE
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUICK INFO
+    ====================================================== -->
+
+    <section class="info-strip">
+
+      <div class="container info-grid">
+
+        <div class="info-item reveal">
+          <small>Full Name</small>
+          <strong>Toluwani</strong>
+        </div>
+
+        <div class="info-item reveal">
+          <small>Date of Birth</small>
+          <strong>March 22</strong>
+        </div>
+
+        <div class="info-item reveal">
+          <small>Origin</small>
+          <strong>Ogun State, Nigeria</strong>
+        </div>
+
+        <div class="info-item reveal">
+          <small>Passion</small>
+          <strong>Entertainment</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-label">
+            Get To Know Him
+          </span>
+
+          <h2>
+            About <span>Big Shizzy</span>
+          </h2>
+
+          <div class="gold-line"></div>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+          <div class="about-photo reveal">
+
+            <img
+              src="shizzy-promo.jpg"
+              alt="Big Shizzy promotional artwork"
+            >
+
+            <div class="about-photo-frame"></div>
+
+          </div>
+
+
+          <div class="about-content reveal">
+
+            <p>
+              Big Shizzy is an artist and entertainer from Ogun State,
+              Nigeria, with a passion for creativity and entertainment.
+            </p>
+
+            <p>
+              His interests and professional activities cover music,
+              barbing and painting, allowing him to express creativity
+              across different areas.
+            </p>
+
+            <p>
+              Through artist promotion, branding, entertainment and
+              media services, Big Shizzy is building a professional
+              platform for artists, brands and entertainment projects.
+            </p>
+
+
+            <div class="about-highlight">
+
+              <strong>
+                Creativity is at the heart of the Big Shizzy brand.
+              </strong>
+
+              <p>
+                From music and entertainment to visual creativity,
+                the goal is to create, connect and grow.
+              </p>
+
+            </div>
+
+
+            <div class="facts">
+
+              <div class="fact">
+                <small>Full Name</small>
+                <strong>Toluwani</strong>
+              </div>
+
+              <div class="fact">
+                <small>Date of Birth</small>
+                <strong>March 22</strong>
+              </div>
+
+              <div class="fact">
+                <small>State of Origin</small>
+                <strong>Ogun State, Nigeria</strong>
+              </div>
+
+              <div class="fact">
+                <small>Hobby</small>
+                <strong>Entertainment</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ARTIST PROFILE
+    ====================================================== -->
+
+    <section class="profile">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <span class="section-label">
+            The Brand
+          </span>
+
+          <h2>
+            More Than <span>One Talent</span>
+          </h2>
+
+          <p class="section-description">
+            Big Shizzy combines entertainment with different creative
+            interests to build a unique personal brand.
+          </p>
+
+        </div>
+
+
+        <div class="profile-grid">
+
+
+          <div class="profile-box reveal">
+
+            <div class="profile-icon">
+              ♪
+            </div>
+
+            <h3>
+              Music & Entertainment
+            </h3>
+
+            <p>
+              Music and entertainment are central to the Big Shizzy
+              creative direction, creating opportunities for expression,
+              performance and connection.
+            </p>
+
+          </div>
+
+
+          <div class="profile-box reveal">
+
+            <div class="profile-icon">
+              ✦
+            </div>
+
+            <h3>
+              Barbing & Style
+            </h3>
+
+            <p>
+              Barbing represents another practical side of the brand,
+              combining personal style, creativity and hands-on skill.
+            </p>
+
+          </div>
+
+
+          <div class="profile-box reveal">
+
+            <div class="profile-icon">
+              ◇
+            </div>
+
+            <h3>
+              Painting & Creativity
+            </h3>
+
+            <p>
+              Painting provides another outlet for visual creativity
+              and artistic expression.
+            </p>
+
+          </div>
+
+
+          <div class="profile-box reveal">
+
+            <div class="profile-icon">
+              +
+            </div>
+
+            <h3>
+              Entertainment Services
+            </h3>
+
+            <p>
+              Artist promotion, branding, event hosting, talent
+              management and media opportunities form part of the
+              wider professional direction.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-label">
+            What He Does
+          </span>
+
+          <h2>
+            Professional <span>Services</span>
+          </h2>
+
+          <p class="section-description">
+            Creative and entertainment services connected to the
+            Big Shizzy brand.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+          <div class="service-card reveal">
+            <div class="service-number">01</div>
+            <h3>Artist Promotion</h3>
+            <p>
+              Promotion and visibility support for artists and projects.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">02</div>
+            <h3>Artist Branding</h3>
+            <p>
+              Creative identity and branding direction for entertainment talent.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">03</div>
+            <h3>Event Hosting</h3>
+            <p>
+              Entertainment and hosting services for events and occasions.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">04</div>
+            <h3>Brand Influencing</h3>
+            <p>
+              Creative entertainment presence for brands and campaigns.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">05</div>
+            <h3>Talent Management</h3>
+            <p>
+              Support for developing and organizing entertainment talent.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">06</div>
+            <h3>Music & Video Production</h3>
+            <p>
+              Creative support for music and visual entertainment projects.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">07</div>
+            <h3>Music Distribution</h3>
+            <p>
+              Support around preparing music projects for distribution.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">08</div>
+            <h3>Modeling</h3>
+            <p>
+              Creative modeling and visual representation opportunities.
+            </p>
+          </div>
+
+
+          <div class="service-card reveal">
+            <div class="service-number">09</div>
+            <h3>Radio & TV</h3>
+            <p>
+              Entertainment and media participation across radio and television.
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JOURNEY / TIMELINE
+    ====================================================== -->
+
+    <section class="journey" id="journey">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <span class="section-label">
+            The Creative Journey
+          </span>
+
+          <h2>
+            Built Around <span>Creativity</span>
+          </h2>
+
+          <p class="section-description">
+            Different parts of the Big Shizzy creative direction
+            come together to form one growing brand.
+          </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <small>01 • MUSIC</small>
+
+              <h3>
+                Music & Entertainment
+              </h3>
+
+              <p>
+                Music and entertainment provide a major platform
+                for creative expression and connection.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <small>02 • CREATIVITY</small>
+
+              <h3>
+                Art & Craft
+              </h3>
+
+              <p>
+                Painting and barbing add practical and visual
+                creative dimensions to the brand.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <small>03 • BRAND</small>
+
+              <h3>
+                Artist Development
+              </h3>
+
+              <p>
+                Promotion, branding and talent-related services
+                help create a professional entertainment platform.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="timeline-item reveal">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+              <small>04 • VISION</small>
+
+              <h3>
+                Bigger Creative Opportunities
+              </h3>
+
+              <p>
+                The vision is to keep developing the Big Shizzy
+                platform through entertainment, media and creative work.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MEDIA
+    ====================================================== -->
+
+    <section class="media" id="media">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-label">
+            Visuals
+          </span>
+
+          <h2>
+            Big Shizzy <span>Media</span>
+          </h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+          <div class="gallery-item reveal">
+
+            <img
+              src="shizzy.jpg"
+              alt="Big Shizzy portrait"
+            >
+
+          </div>
+
+
+          <div class="gallery-item reveal">
+
+            <img
+              src="shizzy-promo.jpg"
+              alt="Big Shizzy promotional artwork"
+            >
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SOCIAL / CTA
+    ====================================================== -->
+
+    <section class="cta">
+
+      <div class="container cta-inner reveal">
+
+        <div class="section-heading center">
+
+          <span class="section-label">
+            Connect With Shizzy
+          </span>
+
+          <h2>
+            Let's Build Something <span>Great</span>
+          </h2>
+
+          <p>
+            For bookings, collaborations, artist promotion,
+            branding, entertainment and media opportunities,
+            get in touch directly.
+          </p>
+
+        </div>
+
+
+        <div class="social-buttons">
+
+          <a
+            href="https://wa.me/2349070804147"
+            target="_blank"
+            class="social-btn"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="mailto:adeshipe94@gmail.com"
+            class="social-btn"
+          >
+            Email
+          </a>
+
+          <!-- Add social-media URLs here when you have them -->
+          <a
+            href="#contact"
+            class="social-btn"
+          >
+            Bookings
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <span class="section-label">
+            Get In Touch
+          </span>
+
+          <h2>
+            Book <span>Big Shizzy</span>
+          </h2>
+
+          <p class="section-description">
+            Ready to work together? Contact Big Shizzy for bookings,
+            collaborations, entertainment and creative opportunities.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <div class="contact-card reveal">
+
+            <h3>
+              WhatsApp / Phone
+            </h3>
+
+            <p>
+              For direct enquiries and bookings.
+            </p>
+
+            <a
+              class="contact-link"
+              href="https://wa.me/2349070804147"
+              target="_blank"
+            >
+              +234 907 080 4147
+            </a>
+
+          </div>
+
+
+          <div class="contact-card reveal">
+
+            <h3>
+              Email
+            </h3>
+
+            <p>
+              For professional enquiries and collaborations.
+            </p>
+
+            <a
+              class="contact-link"
+              href="mailto:adeshipe94@gmail.com"
+            >
+              adeshipe94@gmail.com
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="container">
+
+      © <span id="year"></span>
+      BIG SHIZZY.
+      All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ALSO EMBEDDED IN THIS HTML FILE
+  ======================================================== -->
+
+  <script>
+
+    /* -----------------------------------------------
+       MOBILE MENU
+    ------------------------------------------------ */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+    });
+
+
+    /* -----------------------------------------------
+       CLOSE MOBILE MENU AFTER CLICKING LINK
+    ------------------------------------------------ */
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+      link.addEventListener("click", function () {
+
+        navLinks.classList.remove("open");
+
+      });
+
+    });
+
+
+    /* -----------------------------------------------
+       SCROLL PROGRESS
+    ------------------------------------------------ */
+
+    window.addEventListener("scroll", function () {
+
+      const scrollTop = window.scrollY;
+
+      const documentHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+      if (documentHeight <= 0) {
+        return;
+      }
+
+      const progress =
+        (scrollTop / documentHeight) * 100;
+
+      document.getElementById("scrollProgress")
+        .style.width = progress + "%";
+
+    });
+
+
+    /* -----------------------------------------------
+       CURRENT YEAR
+    ------------------------------------------------ */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* -----------------------------------------------
+       SCROLL REVEAL ANIMATION
+    ------------------------------------------------ */
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        function (entries) {
+
+          entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+              revealObserver.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    document.querySelectorAll(".reveal")
+      .forEach(function (element) {
+
+        revealObserver.observe(element);
+
+      });
+
+
+    /* -----------------------------------------------
+       HEADER SHADOW ON SCROLL
+    ------------------------------------------------ */
+
+    const header =
+      document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+
+      if (window.scrollY > 30) {
+
+        header.style.boxShadow =
+          "0 10px 30px rgba(0,0,0,.35)";
+
+      } else {
+
+        header.style.boxShadow = "none";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
